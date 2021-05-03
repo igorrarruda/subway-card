@@ -1,0 +1,25 @@
+
+● O cartão não precisa ser recarregado
+● O cartão cobra da conta bancária do proprietário
+diretamente, quando usado
+● O cartão é usado para entrar e sair nas estações
+● O sistema de trem que aceita este cartão tem duas
+zonas categóricas de estações, Zona A e Zona B
+Viajar na zona B é mais caro do que viajar na Zona A
+● O preço da zona B inclui viagens dentro da zona A
+● As tarifas são as descritas abaixo, em real:
+Zona Único Dia Semana Mês
+A 6,00 10,00 30,00 130,00
+B 7,00 12,00 45,00 170,00
+● A coluna “Único” refere-se à apenas uma jornada de
+uma estação para outra
+A tarifa de um dia inclui todas as viagens
+individuais feitas em um único dia
+● A tarifa de uma semana inclui todas as viagens
+individuais feitas em uma única semana
+● A tarifa de um mês inclui todas as viagens
+individuais feitas em um único mês
+● A tarifa escala automaticamente de acordo com o tanto de viagens do usuár???io
+● Não importa quantas viagens sejam feitas dentro
+de um dos limites de tempo de uma zona específica, o
+preço será limitado à tarifa daquele período de tempo.

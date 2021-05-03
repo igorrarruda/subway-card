@@ -1,0 +1,20 @@
+[
+  {
+    "zone": "A",
+    "fares": {
+      "unique": 6,
+      "day": 10,
+      "week": 30,
+      "month": 130
+    }
+  },
+  {
+    "zone": "B",
+    "fares": {
+      "unique": 7,
+      "day": 12,
+      "week": 45,
+      "month": 170
+    }
+  }
+]
