@@ -40,18 +40,22 @@ yarn test
 
 to run unit tests.
 
-then, run
+### BDD tests
+
+Run:
 
 ```cmd
 yarn cucumber-test
 ```
 
-to run cucumber tests.
+to run cucumber features.
 
-finaly, run
+### Functional tests
+
+Run:
 
 ```cmd
 yarn selenium
 ```
 
-to run cucumber tests (to execute this test correctly you need backend and frontend running in parallel).
+to run selenium (to execute this test correctly you need backend and frontend running in parallel).
