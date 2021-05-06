@@ -27,10 +27,6 @@ describe("Station business logic", () => {
     jest.resetAllMocks();
   });
 
-  //   it("should validate how many times the user traveled on the day", () => {
-  //     expect(station.travels()).toBe(1);
-  //   });
-
   it("should debit the user's account if it has a balance", () => {
     jest.spyOn(fare, "getFares").mockReturnValueOnce({
       unique: 6,
@@ -41,6 +37,10 @@ describe("Station business logic", () => {
     jest
       .spyOn(fs, "readFileSync")
       .mockReturnValueOnce(JSON.stringify(mockData));
-    expect(access(1, "A")).toBe(10);
+    const userAccess = access(1, "A", "day", 10);
+    expect(userAccess.userId).toBe(1);
+    expect(userAccess.travelZone).toBe("A");
+    expect(userAccess.fare).toBe("day");
+    expect(userAccess.value).toBe(10);
   });
 });

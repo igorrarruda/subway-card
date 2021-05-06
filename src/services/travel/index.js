@@ -4,14 +4,15 @@ const { getFares } = require("../fare");
 const { access } = require("../station");
 
 const travel = (userId, zone) => {
-  const card = getCard(userId);
-  const zones = getFares(zone);
-  const billed = bill(card.userId, zones[card.fare]);
-  if (!billed) {
-    throw "Impossible to bill";
+  try {
+    const card = getCard(userId);
+    const zones = getFares(zone);
+    bill(card.userId, zones[card.fare]);
+    const userTravel = access(userId, zone, card.fare, zones[card.fare]);
+    return userTravel;
+  } catch (e) {
+    throw e;
   }
-  const userTravel = access(userId, zone, card.fare, zones[card.fare]);
-  return userTravel;
 };
 
 module.exports = { travel };

@@ -6,8 +6,6 @@ Feature: Get a new card
   Scenario Outline: To get a card
     Given The user is "<userId>" and fare is "<fare>"
     When I create in the system
-    # And I keep the JSON response at "id" as "ID"
-    # And I keep the JSON response at "created" as "CREATED"
     Then I should be receive "<response>"
     Examples:
       | userId | fare   | response |

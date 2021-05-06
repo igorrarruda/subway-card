@@ -1,4 +1,4 @@
-const { Given, When, Then, AfterAll, After } = require("@cucumber/cucumber");
+const { Given, When, Then } = require("@cucumber/cucumber");
 const assert = require("assert").strict;
 const { newCard } = require("../../src/services/card");
 

@@ -1,18 +1,23 @@
+const charge = require("../charge");
 const { travel } = require("./index");
 
-// import * as charge from "../charge";
-// jest.mock('charge');
-
-// jest.spyOn(charge, "bill").mockReturnValue();
+jest.mock("../charge");
 
 describe("Travel business logic", () => {
-  it("Should pay a travel", () => {
-    expect(travel(1, "A")).toBe(true);
+  beforeEach(() => {
+    jest.resetModules();
   });
-  //   it("should debit the user's account if it has a balance", () => {
-  //     expect(chargeAccount(1, 7)).toBe(true);
-  //   });
-  //   it("should debit the user's account if there is no balance", () => {
-  //     expect(chargeAccount(1, 100)).toBe(false);
-  //   });
+
+  afterEach(() => {
+    jest.resetAllMocks();
+  });
+
+  it("Should pay a travel", () => {
+    jest.spyOn(charge, "bill").mockReturnValueOnce(true);
+    const userTravel = travel(1, "A");
+    expect(userTravel.userId).toBe(1);
+    expect(userTravel.travelZone).toBe("A");
+    expect(userTravel.fare).toBe("month");
+    expect(userTravel.value).toBe(130);
+  });
 });
